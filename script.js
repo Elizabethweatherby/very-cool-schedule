@@ -22,7 +22,13 @@ for (var i = 0; i < saveButtons.length; i++) {
   saveButtons[i].addEventListener("click", function () {
     var container = this.closest('.past, .present, .future');
     var description = container.querySelector('.description').value;
-    localStorage.setItem(container, description);
+    localStorage.setItem(container.getAttribute("id"), description);
+    var now = new Date();
+    var dateTime = now.toLocaleDateString() + " " + now.toLocaleTimeString();
+    var event = "event description";
+    localStorage.setItem("savedEvent", dateTime + ": " + event);
+    var savedEvent = localStorage.getItem("savedEvent");
+    console.log(savedEvent);
   });
 }
 
@@ -44,5 +50,4 @@ for (var i = 0; i < saveButtons.length; i++) {
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  //
   // TODO: Add code to display the current date in the header of the page.
