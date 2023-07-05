@@ -1,2 +1,2 @@
 # very-cool-schedule
-This is a calender thats allows users to save events for their work day hour-by-hour. The calender is ran by dynamically updated HTML and CSS and powered by jQuery.
+This is a calender thats allows users to save events for their work day hour-by-hour. The calender is ran by dynamically updated HTML and CSS and powered by jQuery. When you enter an event in the time-blocks, it will be saved into local storage accordingly with the time and date it was entered. The current day is displayed at the top of the calender.
